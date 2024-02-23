@@ -8,12 +8,6 @@ from matplotlib.gridspec import GridSpec as griddy
 import webbrowser
 import random
 
-url = []
-url.append("https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2F8vgs9xu3tira1.jpg")
-url.append("https://3dmodels.org/360-view/?id=123311")
-url.append("https://i.imgflip.com/4oz9k3.png")
-url.append("https://media.tenor.com/FznHbwHlar4AAAAe/my-disappointment.png")
-url.append("https://cdn-img.scalabs.com.au/X5wbk69GHvQithOuXoO6GJvyy9PlHHov17DBKF678DI/aHR0cHM6Ly9zdy10/cmlwbGVtLXByZC5z/Y2FkaWdpdGFsLmlv/L21lZGlhLzM1ODU2/L2JvYi1rYXR0ZXIt/cmFudC04MDAuanBn/P3ByZXNldD1NYWlu/SW1hZ2U")
 
 WIDTH, HEIGHT = 800, 600
 # Constants for the three plotters
@@ -25,7 +19,7 @@ PLOTTER_Y2 = PLOTTER_Y1 + PLOTTER_HEIGHT + 30
 PLOTTER_Y3 = PLOTTER_Y2 + PLOTTER_HEIGHT + 30
 
 # Number of data points to display on the graph
-num_points = 500
+num_points = 50
 
 # set initial main graph
 main = 1
@@ -144,9 +138,8 @@ while running:
                    ax2.set_position(gs[1,-1].get_position(fig))
                    ax3.set_position(gs[2,-1].get_position(fig))
                    main = 4
-           # else:
-           #     url_to_use = random.choice(url)
-           #     webbrowser.open(url_to_use)
+           else:
+               pass
 
    # Get the state of all keyboard keys
    keys = pygame.key.get_pressed()
@@ -259,7 +252,7 @@ while running:
    pygame.display.flip()
 
    # Pause for a short interval to control the animation speed
-   pygame.time.delay(10)
+   pygame.time.delay(1)
 
 # Quit pygame
 pygame.quit()
